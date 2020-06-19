@@ -8,7 +8,10 @@ class  App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			doggo: [],
+			
+				doggoURL: [],
+				
+			
 		}
 		
 	}
@@ -21,7 +24,7 @@ class  App extends Component {
 			responseType: 'json',
 			params: {
 				reqUrl:
-					'http://shibe.online/api/shibes?count=5&urls=true&httpsUrls=false',
+					'http://shibe.online/api/shibes?count=10&urls=true&httpsUrls=false',
 				
 				proxyHeaders: {
 					header_params: 'value',
@@ -30,7 +33,7 @@ class  App extends Component {
 			xmlToJSON: false,
     }).then((res) => {
       this.setState({
-				doggo: res.data,
+				doggoURL: res.data,
 			})
     });
 		
@@ -40,16 +43,19 @@ class  App extends Component {
 		return (
 			<div className="App">
 				{/* Import Header comp */}
-				<Header />
+				
+				<Header className='wrapper'/>
 
 				{/* Map and return doggo profiles */}
-				{this.state.doggo.map((dog) => {
-					return (
-						<DoggoProfile 
-							key={dog} 
-							imgSrc={dog}
-						/>
-				)})} 
+				<div className="doggoSelection wrapper">
+					{this.state.doggoURL.map((doggie) => {
+						return (
+							<DoggoProfile 
+								key={doggie} 
+								imgSrc={doggie}
+							/>
+					)})}
+				</div> 
 				
 			</div>
 		);
