@@ -100,12 +100,25 @@ h1 {
 	margin: 5% auto;
 	transition: transform 0.35s ease-in-out;
 	text-align: center;
+	border-radius: 50px;
+	background: transparent;
 }
 
 .doggoProfile:hover,
 .doggoProfile:focus-within {
 	transform: scale(1.5);
 	z-index: 10;
+	box-shadow: 0 0 500px #000;
+}
+
+.doggoProfile button {
+	margin: 5%;
+	opacity: 0;	
+}
+
+.doggoProfile:hover > button,
+.doggoProfile button:focus {
+	opacity: 1;
 }
 
 .imageContainer {
@@ -132,16 +145,25 @@ h1 {
 	font-size: 2rem;
 }
 
-.doggoProfile button {
-	margin: 5%;
-	display: none;
-}
 
-.doggoProfile button:hover,
-.doggoProfile button:focus {
-	display: block;
-}
 
 .doggoProfile i {
 	margin-right: 15px;
 }
+
+/* Styling for the Loading.js */
+h2 {
+	font-size: 3rem;
+	font-family: 'Itim', cursive;
+	text-decoration: underline wavy;
+	margin: 10% auto;
+}
+
+.loading {
+	text-align: center;
+}
+
+.loading img {
+	width: auto;
+}
+

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Header from "./components/Header.js";
-import DoggoProfile from "./components/DoggoProfile.js";
+import Header from './components/Header.js';
+import DoggoProfile from './components/DoggoProfile.js';
+// import img from './loadingGif.gif';
+import Loading from './components/Loading.js';
 import './App.css';
 
 class  App extends Component {
@@ -60,12 +62,12 @@ class  App extends Component {
 
 	render() {
 		return (
-			<div className="App">
+			<div className='App'>
 				{/* Import Header comp */}
 				<Header className='wrapper'/>
 
 				{/* Map and return doggo profiles */}
-				<div className="doggoSelection wrapper">
+				<div className='doggoSelection wrapper'>
 					{this.state.doggo.map((dog) => {
 						return (
 							<DoggoProfile 
@@ -75,6 +77,11 @@ class  App extends Component {
 					)})}
 				</div> 
 				
+				<Loading className='wrapper' />
+			
+					{/* <div className="loading">
+						<img src={img} alt='GIF of cartoon dog dancing'/>
+					</div> */}
 
 			</div>
 		);
