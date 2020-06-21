@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Header from './components/Header.js';
 import DoggoProfile from './components/DoggoProfile.js';
-// import img from './loadingGif.gif';
+import Modal from './components/Modal.js';
 import Loading from './components/Loading.js';
+import Confirmed from './components/Confirmed.js';
+import Declined from './components/Declined.js';
 import './App.css';
 
 class  App extends Component {
@@ -11,6 +13,9 @@ class  App extends Component {
 		super();
 		this.state = {
 			doggo: [],
+			isDoggoSelection: true,
+			isLoading: '',
+			confirmation: '',
 		}
 		
 	}
@@ -57,14 +62,36 @@ class  App extends Component {
 				doggo: myData,
 			})
 		}) // End axios request
-		
+	}
+
+	scrollToDoggoSelection = () => {
+		const doggoSelection = document.querySelector('.doggoSelection');
+
+		document.querySelector('.viewButton').addEventListener('click', () => {
+			doggoSelection.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+			})
+		});
+	}
+
+	showConfirmationModal = () => {
+		console.log("Yo")
+	}
+
+	randomBool = () => {
+		const bool = Math.round(Math.random() * 1);
+
+		this.setState({
+			confirmation: bool,
+		})
 	}
 
 	render() {
 		return (
 			<div className='App'>
 				{/* Import Header comp */}
-				<Header className='wrapper'/>
+				<Header className='wrapper' clickEvent={this.scrollToDoggoSelection} />
 
 				{/* Map and return doggo profiles */}
 				<div className='doggoSelection wrapper'>
@@ -77,11 +104,15 @@ class  App extends Component {
 					)})}
 				</div> 
 				
-				<Loading className='wrapper' />
-			
-					{/* <div className="loading">
-						<img src={img} alt='GIF of cartoon dog dancing'/>
-					</div> */}
+				{/* Display pop up modal with selected doggo to confirm selection */}
+				<Modal />
+				
+				{/* Show Loading screen after doggo is selected */}
+				{this.state.isLoading ? <Loading className='wrapper' /> : null}
+
+				{/* Display either appointment confirm or declined */}
+				{this.state.confrimation == true ?  <Confirmed /> : null}
+				{this.state.confitmation == false ? <Declined /> : null}
 
 			</div>
 		);

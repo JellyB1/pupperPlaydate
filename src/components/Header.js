@@ -1,36 +1,22 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class Header extends Component {
-
-	scrollToDoggoSelection = () => {
-		const doggoSelection = document.querySelector('.doggoSelection');
-
-		document.querySelector('.viewButton').addEventListener('click', () => {
-			doggoSelection.scrollIntoView({
-				behavior: 'smooth',
-				block: 'start'
-			})
-		});
-	}
-	
-	render() {
-		
-		return (
-			<header>	
-				<div className="wrapper">
-					<div className="headerContainer">
-						<h1>Pupper Play Date</h1>
-						
-						<button 
-							onClick={this.scrollToDoggoSelection} 
-							className="viewButton">
-								View Puppers
-						</button>
-					</div>
+const Header = ({clickEvent}) => {	
+	return (
+		<header>	
+			<div className="wrapper">
+				<div className="headerContainer">
+					<h1>Pupper Play Date</h1>
+					
+					<button 
+						onClick={clickEvent} 
+						className="viewButton">
+							View Puppers
+					</button>
 				</div>
-			</header>
-		)
-	}
+			</div>
+		</header>
+	)
 }
+
 
 export default Header;

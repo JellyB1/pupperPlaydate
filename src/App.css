@@ -145,10 +145,42 @@ h1 {
 	font-size: 2rem;
 }
 
-
-
 .doggoProfile i {
 	margin-right: 15px;
+}
+
+/* Styling for Modal.js */
+.modalContainer {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(0,0,0,0.8);
+}
+
+.confirmationModal {
+	background-color: #FFF;
+	margin: 5% auto;
+	height: 90%;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.confirmationModal .btn {
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+h3 {
+	font-size: 3rem;
+	font-family: 'Itim', cursive;
+	margin: 10% auto;
 }
 
 /* Styling for the Loading.js */
@@ -167,3 +199,26 @@ h2 {
 	width: auto;
 }
 
+/* Styling for Confirmed.js and Declined.js*/
+.confirmed,
+.declined {
+	text-align: center;
+}
+.confirmed i,
+.declined i {
+	font-size: 6rem;
+	margin: 10% auto 5%;
+}
+.confirmed h3,
+.declined h3 {
+	font-size: 3rem;
+	margin: 5% auto 10%;
+}
+
+.confirmed i {
+	color: #008000;
+}
+
+.declined i {
+	color: #FF0000;
+}
