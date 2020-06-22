@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Header from './components/Header.js';
+import Navbar from './components/Navbar.js';
 import DoggoProfile from './components/DoggoProfile.js';
 import Modal from './components/Modal.js';
 import Loading from './components/Loading.js';
@@ -11,15 +12,16 @@ import './App.css';
 class  App extends Component {
 	constructor() {
 		super();
+		
 		this.state = {
 			doggo: [],
 			isHeader: true,
+			isNavbar: false,
 			isDoggoSelection: true,
 			modal: false,
 			isLoading: '',
 			confirmation: '',
-		}
-		
+		}	
 	}
 
 	componentDidMount() {
@@ -80,29 +82,46 @@ class  App extends Component {
 	openModal = () => {
 		this.setState({
 			modal: true,
+			isDoggoSelection: false,
 		})
 	}
 
 	closeModal = () => {
 		this.setState({
-			modal: false,
-		})
-	}
-
-	showLoading = () => {
-		this.setState({
 			isHeader: false,
-			isDoggoSelection: false,
+			isNavbar: true,
+			isDoggoSelection: true,
 			modal: false,
-			isLoading: true,
 		})
 	}
 
 	randomBool = () => {
-		const bool = Math.round(Math.random() * 1);
+		let bool = Math.round(Math.random() * 9);
+
+		if (bool % 2) {
+			bool = true;
+		} else {
+			bool = false;
+		}
 
 		this.setState({
 			confirmation: bool,
+			isLoading: false,
+		})
+	}
+
+	showLoading = () => {
+		// 
+		const randomInterval = Math.round((Math.random() * 10) * 1000);
+		setTimeout(this.randomBool, randomInterval);
+		console.log(randomInterval)
+
+		this.setState({
+			isHeader: false,
+			isNavbar: false,
+			isDoggoSelection: false,
+			modal: false,
+			isLoading: true,
 		})
 	}
 
@@ -115,6 +134,9 @@ class  App extends Component {
 						: null
 				}
 
+				{/* Navbar for display after first Doggo Selection view */}
+				{this.state.isNavbar ? <Navbar /> : null}
+
 				{/* Map and return doggo profiles */}
 				{this.state.isDoggoSelection ? 
 					<div className='doggoSelection wrapper'>
@@ -123,6 +145,7 @@ class  App extends Component {
 								<DoggoProfile 
 									key={dog.doggoID} 
 									imgSrc={dog.doggoURL}
+									showModal={this.openModal}
 								/>
 						)})}
 					</div> 
@@ -139,8 +162,9 @@ class  App extends Component {
 				{this.state.isLoading ? <Loading className='wrapper' /> : null}
 
 				{/* Display either appointment confirm or declined */}
-				{this.state.confrimation == true ?  <Confirmed /> : null}
-				{this.state.confitmation == false ? <Declined /> : null}
+				{this.state.confirmation === true ? <Confirmed /> :
+				this.state.confirmation === false ? <Declined /> :
+				null}
 
 			</div>
 		);

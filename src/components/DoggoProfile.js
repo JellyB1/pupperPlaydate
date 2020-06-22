@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DoggoProfile = ({ imgSrc, clickEvent }) => {
+const DoggoProfile = ({ imgSrc, showModal }) => {
 	return(
 		<div className='doggoProfile'>
 			
@@ -13,7 +13,7 @@ const DoggoProfile = ({ imgSrc, clickEvent }) => {
 					Online Now!
 				</p>
 			</div>
-			<button onClick={clickEvent}>
+			<button onClick={showModal}>
 				<i className='fas fa-paw'></i>
 				Select me!
 			</button>
