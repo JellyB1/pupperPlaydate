@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/angelicaChungProjectFive/static/css/main.15f971f7.chunk.css",
+    "main.js": "/angelicaChungProjectFive/static/js/main.ddb40510.chunk.js",
+    "main.js.map": "/angelicaChungProjectFive/static/js/main.ddb40510.chunk.js.map",
+    "runtime-main.js": "/angelicaChungProjectFive/static/js/runtime-main.bbf57866.js",
+    "runtime-main.js.map": "/angelicaChungProjectFive/static/js/runtime-main.bbf57866.js.map",
+    "static/js/2.baf547ff.chunk.js": "/angelicaChungProjectFive/static/js/2.baf547ff.chunk.js",
+    "static/js/2.baf547ff.chunk.js.map": "/angelicaChungProjectFive/static/js/2.baf547ff.chunk.js.map",
+    "index.html": "/angelicaChungProjectFive/index.html",
+    "precache-manifest.2205bff4aca10153b9b92dc7c27db76e.js": "/angelicaChungProjectFive/precache-manifest.2205bff4aca10153b9b92dc7c27db76e.js",
+    "service-worker.js": "/angelicaChungProjectFive/service-worker.js",
+    "static/css/main.15f971f7.chunk.css.map": "/angelicaChungProjectFive/static/css/main.15f971f7.chunk.css.map",
+    "static/js/2.baf547ff.chunk.js.LICENSE.txt": "/angelicaChungProjectFive/static/js/2.baf547ff.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/angelicaChungProjectFive/static/media/headerImg.52e2d5b6.jpg",
+    "static/media/loadingGif.gif": "/angelicaChungProjectFive/static/media/loadingGif.55c8a2b4.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bbf57866.js",
+    "static/js/2.baf547ff.chunk.js",
+    "static/css/main.15f971f7.chunk.css",
+    "static/js/main.ddb40510.chunk.js"
+  ]
+}
