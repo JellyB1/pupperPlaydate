@@ -13,7 +13,9 @@ class  App extends Component {
 		super();
 		this.state = {
 			doggo: [],
+			isHeader: true,
 			isDoggoSelection: true,
+			modal: false,
 			isLoading: '',
 			confirmation: '',
 		}
@@ -75,8 +77,25 @@ class  App extends Component {
 		});
 	}
 
-	showConfirmationModal = () => {
-		console.log("Yo")
+	openModal = () => {
+		this.setState({
+			modal: true,
+		})
+	}
+
+	closeModal = () => {
+		this.setState({
+			modal: false,
+		})
+	}
+
+	showLoading = () => {
+		this.setState({
+			isHeader: false,
+			isDoggoSelection: false,
+			modal: false,
+			isLoading: true,
+		})
 	}
 
 	randomBool = () => {
@@ -91,22 +110,31 @@ class  App extends Component {
 		return (
 			<div className='App'>
 				{/* Import Header comp */}
-				<Header className='wrapper' clickEvent={this.scrollToDoggoSelection} />
+				{ this.state.isHeader ?
+						<Header className='wrapper' clickEvent={this.scrollToDoggoSelection} />
+						: null
+				}
 
 				{/* Map and return doggo profiles */}
-				<div className='doggoSelection wrapper'>
-					{this.state.doggo.map((dog) => {
-						return (
-							<DoggoProfile 
-								key={dog.doggoID} 
-								imgSrc={dog.doggoURL}
-							/>
-					)})}
-				</div> 
-				
+				{this.state.isDoggoSelection ? 
+					<div className='doggoSelection wrapper'>
+						{this.state.doggo.map((dog) => {
+							return (
+								<DoggoProfile 
+									key={dog.doggoID} 
+									imgSrc={dog.doggoURL}
+								/>
+						)})}
+					</div> 
+					: null
+				}
+
 				{/* Display pop up modal with selected doggo to confirm selection */}
-				<Modal />
-				
+				{this.state.modal ? 
+					<Modal showLoading={this.showLoading} closeEvent={this.closeModal} />
+					: null
+				}
+
 				{/* Show Loading screen after doggo is selected */}
 				{this.state.isLoading ? <Loading className='wrapper' /> : null}
 
