@@ -1,4 +1,5 @@
 import React from 'react';
+import img from '../assets/confirmed.gif'
 
 const Confirmed = () => {
 	return (
@@ -6,6 +7,9 @@ const Confirmed = () => {
 			<div className='confirmed'>
 				<i class="fas fa-check-circle"></i>
 				<h3>Yay! Your playdate has been confirmed!</h3>
+			</div>
+			<div>
+				<img src={img} alt='Happy pupper ready to play!'/>
 			</div>
 		</div>
 	)

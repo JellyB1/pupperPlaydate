@@ -8,6 +8,7 @@ import Loading from './components/Loading.js';
 import Confirmed from './components/Confirmed.js';
 import Declined from './components/Declined.js';
 import './App.css';
+import img from './assets/declined.gif';
 
 class  App extends Component {
 	constructor() {
@@ -18,6 +19,7 @@ class  App extends Component {
 			isHeader: true,
 			isNavbar: false,
 			isDoggoSelection: true,
+			isChosenOne: '',
 			modal: false,
 			isLoading: '',
 			confirmation: '',
@@ -79,10 +81,12 @@ class  App extends Component {
 		});
 	}
 
-	openModal = () => {
+	openModal = (event) => {
+		const chosenDoggo = event.target.value;
 		this.setState({
 			modal: true,
 			isDoggoSelection: false,
+			isChosenOne: chosenDoggo,
 		})
 	}
 
@@ -111,14 +115,13 @@ class  App extends Component {
 	}
 
 	showLoading = () => {
-		// 
-		const randomInterval = Math.round((Math.random() * 10) * 1000);
+		// A timeout to create the illusion that someone on the other side is responding to your request
+		const randomInterval = Math.round((Math.random() * 5) * 1000);
 		setTimeout(this.randomBool, randomInterval);
-		console.log(randomInterval)
 
 		this.setState({
 			isHeader: false,
-			isNavbar: false,
+			isNavbar: true,
 			isDoggoSelection: false,
 			modal: false,
 			isLoading: true,
@@ -141,11 +144,13 @@ class  App extends Component {
 				{this.state.isDoggoSelection ? 
 					<div className='doggoSelection wrapper'>
 						{this.state.doggo.map((dog) => {
+							
 							return (
 								<DoggoProfile 
 									key={dog.doggoID} 
+									id={dog.doggoID} 
 									imgSrc={dog.doggoURL}
-									showModal={this.openModal}
+									openModal={this.openModal}
 								/>
 						)})}
 					</div> 
@@ -154,7 +159,7 @@ class  App extends Component {
 
 				{/* Display pop up modal with selected doggo to confirm selection */}
 				{this.state.modal ? 
-					<Modal showLoading={this.showLoading} closeEvent={this.closeModal} />
+					<Modal chosenPupper={this.state.isChosenOne} showLoading={this.showLoading} closeEvent={this.closeModal} />
 					: null
 				}
 
