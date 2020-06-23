@@ -8,7 +8,7 @@ const Confirmed = () => {
 				<i class="fas fa-check-circle"></i>
 				<h3>Yay! Your playdate has been confirmed!</h3>
 			</div>
-			<div>
+			<div className='imgCD'>
 				<img src={img} alt='Happy pupper ready to play!'/>
 			</div>
 		</div>

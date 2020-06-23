@@ -8,7 +8,7 @@ const Declined = () => {
 				<i class="fas fa-times-circle"></i>
 				<h3>Oh no! Your playdate has been declined!</h3>
 			</div>
-			<div>
+			<div className='imgCD'>
 				<img src={img} alt='Sleepy pupper animated gif'/>
 			</div>
 		</div>
