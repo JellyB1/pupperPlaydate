@@ -234,6 +234,7 @@ h2 {
 	font-size: 6rem;
 	margin: 10% auto 5%;
 }
+
 .confirmed h3,
 .declined h3 {
 	font-size: 3rem;
@@ -246,4 +247,16 @@ h2 {
 
 .declined i {
 	color: #FF0000;
+}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+	header {
+		height: 80vh;
+	}
+
+	.headerContainer {
+		width: 100%;
+	}
 }
