@@ -8,7 +8,6 @@ import Loading from './components/Loading.js';
 import Confirmed from './components/Confirmed.js';
 import Declined from './components/Declined.js';
 import './App.css';
-import img from './assets/declined.gif';
 
 class  App extends Component {
 	constructor() {
