@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/angelicaChungProjectFive/static/css/main.66081f23.chunk.css",
+    "main.css": "/angelicaChungProjectFive/static/css/main.323d9a23.chunk.css",
     "main.js": "/angelicaChungProjectFive/static/js/main.71a12cef.chunk.js",
     "main.js.map": "/angelicaChungProjectFive/static/js/main.71a12cef.chunk.js.map",
     "runtime-main.js": "/angelicaChungProjectFive/static/js/runtime-main.bbf57866.js",
@@ -8,9 +8,9 @@
     "static/js/2.dfc994a2.chunk.js": "/angelicaChungProjectFive/static/js/2.dfc994a2.chunk.js",
     "static/js/2.dfc994a2.chunk.js.map": "/angelicaChungProjectFive/static/js/2.dfc994a2.chunk.js.map",
     "index.html": "/angelicaChungProjectFive/index.html",
-    "precache-manifest.799987b24b63a1cd091afb80a87c4801.js": "/angelicaChungProjectFive/precache-manifest.799987b24b63a1cd091afb80a87c4801.js",
+    "precache-manifest.cdb64660385df9224c3074b963b97ef4.js": "/angelicaChungProjectFive/precache-manifest.cdb64660385df9224c3074b963b97ef4.js",
     "service-worker.js": "/angelicaChungProjectFive/service-worker.js",
-    "static/css/main.66081f23.chunk.css.map": "/angelicaChungProjectFive/static/css/main.66081f23.chunk.css.map",
+    "static/css/main.323d9a23.chunk.css.map": "/angelicaChungProjectFive/static/css/main.323d9a23.chunk.css.map",
     "static/js/2.dfc994a2.chunk.js.LICENSE.txt": "/angelicaChungProjectFive/static/js/2.dfc994a2.chunk.js.LICENSE.txt",
     "static/media/confirmed.gif": "/angelicaChungProjectFive/static/media/confirmed.264eae12.gif",
     "static/media/declined.gif": "/angelicaChungProjectFive/static/media/declined.2a9c6d84.gif",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.bbf57866.js",
     "static/js/2.dfc994a2.chunk.js",
-    "static/css/main.66081f23.chunk.css",
+    "static/css/main.323d9a23.chunk.css",
     "static/js/main.71a12cef.chunk.js"
   ]
 }
