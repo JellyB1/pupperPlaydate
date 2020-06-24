@@ -29,7 +29,7 @@ button {
 	transition: border 0.35s ease-in-out, background-color 0.35s ease-in-out, color 0.35s ease-in-out;
 	border-bottom: 5px ridge #A9A9A9;
 	border-radius: 20px;
-	color: #F0F0F0;
+	background-color: #F0F0F0;
 }
 
 button:hover,
