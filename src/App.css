@@ -189,12 +189,9 @@ h1 {
 .modalImage {
 	height: 300px;
 	width: 300px;
-	/* height: auto; */
-	/* height: */
 }
 
 .modalImage img {
-	height: 100%;
 	width: 100%;
 }
 
@@ -255,7 +252,7 @@ h2 {
 .confirmed h3,
 .declined h3 {
 	font-size: 3rem;
-	margin: 5% auto 10%;
+	margin: 5% auto;
 }
 
 .confirmed i {
