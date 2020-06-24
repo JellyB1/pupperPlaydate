@@ -27,6 +27,8 @@ button {
 	border-radius: 10px;
 	padding: 2%;
 	transition: border 0.35s ease-in-out, background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+	border-bottom: 5px ridge #A9A9A9;
+	border-radius: 20px;
 }
 
 button:hover,
@@ -36,17 +38,12 @@ button:focus {
 	color: #fff;
 }
 
-/* img { */
-	/* height: 100%; */
-	/* width: 100%; */
-/* } */
-
 /* Styling for App */
 .doggoSelection {
 	display: flex;
 	flex-flow: row wrap;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 
 /* Styling for Header.js */
@@ -86,6 +83,7 @@ h1 {
 	text-align: center;
 	height: auto;
 	padding: 30px 0px;
+	
 	background-image: repeating-radial-gradient(circle at center center, transparent 0px, transparent 2px,rgba(0,0,0,0.04) 2px, rgba(0,0,0,0.04) 5px,transparent 5px, transparent 9px,rgba(0,0,0,0.04) 9px, rgba(0,0,0,0.04) 12px),repeating-radial-gradient(circle at center center, rgb(255,255,255) 0px, rgb(255,255,255) 4px,rgb(255,255,255) 4px, rgb(255,255,255) 14px,rgb(255,255,255) 14px, rgb(255,255,255) 27px,rgb(255,255,255) 27px, rgb(255,255,255) 30px); background-size: 62px 62px;
 	border-bottom: 10px ridge #A9A9A9;
 	border-radius: 20px;
@@ -99,7 +97,7 @@ h1 {
 .doggoProfile {
 	background-color: #fff;
 	border-radius: 50px;
-	margin: 5% auto;
+	margin: 5% 2.5% 0%;
 	transition: transform 0.35s ease-in-out;
 	text-align: center;
 }
@@ -139,6 +137,7 @@ h1 {
 	border: 3px solid #000;
 	border-radius: 20%;
 	overflow: hidden;	
+	
 	background-image: repeating-radial-gradient(circle at center center, transparent 0px, transparent 2px,rgba(0,0,0,0.04) 2px, rgba(0,0,0,0.04) 5px,transparent 5px, transparent 9px,rgba(0,0,0,0.04) 9px, rgba(0,0,0,0.04) 12px),repeating-radial-gradient(circle at center center, rgb(255,255,255) 0px, rgb(255,255,255) 4px,rgb(255,255,255) 4px, rgb(255,255,255) 14px,rgb(255,255,255) 14px, rgb(255,255,255) 27px,rgb(255,255,255) 27px, rgb(255,255,255) 30px); background-size: 62px 62px;
 }
 
@@ -161,6 +160,7 @@ h1 {
 
 /* Styling for Modal.js */
 .modalContainer {
+	display: flex;
 	position: fixed;
 	top: 0;
 	bottom: 0;
@@ -174,8 +174,11 @@ h1 {
 	align-items: center;
 	justify-content: center;
 	border-radius: 20px;
-	margin: 5% auto;
-	height: 90%;
+	margin-top: 5%;
+	height: auto;
+	max-height: 800px;
+	padding-top: 10%;
+	
 	background-image: repeating-radial-gradient(circle at center center, transparent 0px, transparent 2px,rgba(0,0,0,0.04) 2px, rgba(0,0,0,0.04) 5px,transparent 5px, transparent 9px,rgba(0,0,0,0.04) 9px, rgba(0,0,0,0.04) 12px),repeating-radial-gradient(circle at center center, rgb(255,255,255) 0px, rgb(255,255,255) 4px,rgb(255,255,255) 4px, rgb(255,255,255) 14px,rgb(255,255,255) 14px, rgb(255,255,255) 27px,rgb(255,255,255) 27px, rgb(255,255,255) 30px); background-size: 62px 62px;
 }
 
@@ -185,12 +188,28 @@ h1 {
 	align-items: center;
 	justify-content: space-evenly;
 	width: 100%;
+	padding-bottom: 10%;
+}
+
+.modalImage {
+	height: 300px;
+	width: 300px;
+}
+
+.modalImage img {
+	height: 100%;
 }
 
 h3 {
 	font-size: 3rem;
 	font-family: 'Itim', cursive;
 	margin: 10% auto;
+	text-align: center;
+	width: 90%;	
+}
+
+.btn button {
+	width: 100px;
 }
 
 /* Styling for the Loading.js */
@@ -250,6 +269,25 @@ h2 {
 }
 
 /* Media Queries */
+@media (max-width: 700px) {
+	.doggoSelection {
+		justify-content: center;
+		margin-bottom: 20%;
+	}
+
+	.doggoProfile {
+		margin: 2%;
+	}
+
+	.doggoProfile:hover,
+	.doggoProfile:focus-within {
+		transform: scale(1.2);
+	}
+
+	.modalImage {
+		width: 80%;
+	}
+}
 
 @media (max-width: 600px) {
 	header {
@@ -258,5 +296,9 @@ h2 {
 
 	.headerContainer {
 		width: 100%;
+	}
+
+	.doggoProfile {
+		margin: 1.5%;
 	}
 }
