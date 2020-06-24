@@ -20,7 +20,6 @@ class  App extends Component {
 			isDoggoSelection: true,
 			isChosenOne: '',
 			modal: false,
-			// modal: true,
 			isLoading: '',
 			confirmation: '',
 		};	
