@@ -38,6 +38,10 @@ button:focus {
 	color: #fff;
 }
 
+img {
+	width: 100%;
+}
+
 /* Styling for App */
 .doggoSelection {
 	display: flex;
@@ -239,7 +243,6 @@ h2 {
 }
 
 .imgCD img {
-	width: 100%;
 	max-width: 500px;
 }
 
