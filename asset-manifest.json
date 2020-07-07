@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/angelicaChungProjectFive/static/css/main.323d9a23.chunk.css",
-    "main.js": "/angelicaChungProjectFive/static/js/main.71a12cef.chunk.js",
-    "main.js.map": "/angelicaChungProjectFive/static/js/main.71a12cef.chunk.js.map",
-    "runtime-main.js": "/angelicaChungProjectFive/static/js/runtime-main.bbf57866.js",
-    "runtime-main.js.map": "/angelicaChungProjectFive/static/js/runtime-main.bbf57866.js.map",
-    "static/js/2.dfc994a2.chunk.js": "/angelicaChungProjectFive/static/js/2.dfc994a2.chunk.js",
-    "static/js/2.dfc994a2.chunk.js.map": "/angelicaChungProjectFive/static/js/2.dfc994a2.chunk.js.map",
-    "index.html": "/angelicaChungProjectFive/index.html",
-    "precache-manifest.cdb64660385df9224c3074b963b97ef4.js": "/angelicaChungProjectFive/precache-manifest.cdb64660385df9224c3074b963b97ef4.js",
-    "service-worker.js": "/angelicaChungProjectFive/service-worker.js",
-    "static/css/main.323d9a23.chunk.css.map": "/angelicaChungProjectFive/static/css/main.323d9a23.chunk.css.map",
-    "static/js/2.dfc994a2.chunk.js.LICENSE.txt": "/angelicaChungProjectFive/static/js/2.dfc994a2.chunk.js.LICENSE.txt",
-    "static/media/confirmed.gif": "/angelicaChungProjectFive/static/media/confirmed.264eae12.gif",
-    "static/media/declined.gif": "/angelicaChungProjectFive/static/media/declined.2a9c6d84.gif",
-    "static/media/App.css": "/angelicaChungProjectFive/static/media/headerImg.52e2d5b6.jpg",
-    "static/media/loadingGif.gif": "/angelicaChungProjectFive/static/media/loadingGif.55c8a2b4.gif"
+    "main.css": "/pupperPlaydate/static/css/main.56dfeeef.chunk.css",
+    "main.js": "/pupperPlaydate/static/js/main.e5fd1e64.chunk.js",
+    "main.js.map": "/pupperPlaydate/static/js/main.e5fd1e64.chunk.js.map",
+    "runtime-main.js": "/pupperPlaydate/static/js/runtime-main.33c9ed9d.js",
+    "runtime-main.js.map": "/pupperPlaydate/static/js/runtime-main.33c9ed9d.js.map",
+    "static/js/2.dfc994a2.chunk.js": "/pupperPlaydate/static/js/2.dfc994a2.chunk.js",
+    "static/js/2.dfc994a2.chunk.js.map": "/pupperPlaydate/static/js/2.dfc994a2.chunk.js.map",
+    "index.html": "/pupperPlaydate/index.html",
+    "precache-manifest.99f663316135a4a3fade490eb732de75.js": "/pupperPlaydate/precache-manifest.99f663316135a4a3fade490eb732de75.js",
+    "service-worker.js": "/pupperPlaydate/service-worker.js",
+    "static/css/main.56dfeeef.chunk.css.map": "/pupperPlaydate/static/css/main.56dfeeef.chunk.css.map",
+    "static/js/2.dfc994a2.chunk.js.LICENSE.txt": "/pupperPlaydate/static/js/2.dfc994a2.chunk.js.LICENSE.txt",
+    "static/media/confirmed.gif": "/pupperPlaydate/static/media/confirmed.264eae12.gif",
+    "static/media/declined.gif": "/pupperPlaydate/static/media/declined.2a9c6d84.gif",
+    "static/media/App.css": "/pupperPlaydate/static/media/headerImg.52e2d5b6.jpg",
+    "static/media/loadingGif.gif": "/pupperPlaydate/static/media/loadingGif.55c8a2b4.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.bbf57866.js",
+    "static/js/runtime-main.33c9ed9d.js",
     "static/js/2.dfc994a2.chunk.js",
-    "static/css/main.323d9a23.chunk.css",
-    "static/js/main.71a12cef.chunk.js"
+    "static/css/main.56dfeeef.chunk.css",
+    "static/js/main.e5fd1e64.chunk.js"
   ]
 }
